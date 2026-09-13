@@ -50,6 +50,21 @@ section {
   max-width: 500px;
 }
 
+#auth-container {
+  max-width: 500px;
+}
+
+#auth-status {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#signup-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 section h3 {
   margin-bottom: 20px;
   padding-bottom: 10px;

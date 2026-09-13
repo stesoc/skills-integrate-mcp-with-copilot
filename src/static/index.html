@@ -13,6 +13,22 @@
     </header>
 
     <main>
+      <section id="auth-container">
+        <h3>Teacher access</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required autocomplete="username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required autocomplete="current-password" />
+          </div>
+          <button type="submit">Sign in</button>
+        </form>
+        <div id="auth-status" class="info" role="status">Students can browse activities. Teachers can sign in to manage registrations.</div>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
@@ -35,7 +51,7 @@
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" id="signup-submit" disabled>Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>

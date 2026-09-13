@@ -6,6 +6,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- Teacher authentication for registration management
 
 ## Getting Started
 
@@ -18,8 +19,18 @@ A super simple FastAPI application that allows students to view and sign up for 
 2. Run the application:
 
    ```
-   python app.py
+   uvicorn src.app:app --reload
    ```
+
+   Configure teacher credentials before starting the server. Generate a password
+   hash with `python -c "from src.app import hash_password; print(hash_password('change-me'))"`,
+   then create `teacher_credentials.json` outside source control:
+
+   ```json
+   {"teachers": [{"username": "teacher", "password_hash": "scrypt$..."}]}
+   ```
+
+   Set `TEACHER_CREDENTIALS_FILE` when the file is stored elsewhere.
 
 3. Open your browser and go to:
    - API documentation: http://localhost:8000/docs
